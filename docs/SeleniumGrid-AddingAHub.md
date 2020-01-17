@@ -6,16 +6,31 @@ title: Setting up a Selenium Grid hub
 # How to setup a Selenium Grid hub
 The Selenium grid can be run manually or as a docker container.
 
-## Prerequisites
+<!-- vscode-markdown-toc -->
+* 1. [Prerequisites](#Prerequisites)
+* 2. [Setting up the Selenium Grid hub manually](#SettinguptheSeleniumGridhubmanually)
+	* 2.1. [Mac/Linux**](#MacLinux)
+	* 2.2. [Windows](#Windows)
+* 3. [Settings up the Selenium Grid hub with Docker](#SettingsuptheSeleniumGridhubwithDocker)
+	* 3.1. [Prerequisites](#Prerequisites-1)
+	* 3.2. [Setup](#Setup)
+
+<!-- vscode-markdown-toc-config
+	numbering=true
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->
+
+##  1. <a name='Prerequisites'></a>Prerequisites
 
 - Have physical or virtual machine ready to act as a grid hub
   - Install Java on the machine
 
 ---
 
-## Setting up the Selenium Grid hub manually
+##  2. <a name='SettinguptheSeleniumGridhubmanually'></a>Setting up the Selenium Grid hub manually
 
-### Mac/Linux**
+###  2.1. <a name='MacLinux'></a>Mac/Linux**
 
 - Create `~/selenium`
 - Download the selenium standalone to `~/selenium` from [https://selenium.dev/downloads/](https://selenium.dev/downloads/)
@@ -42,7 +57,7 @@ crontab -e
 # press enter
 ```
 
-### Windows
+###  2.2. <a name='Windows'></a>Windows
 
 Create `C:\selenium`
 
@@ -60,15 +75,17 @@ Add new .bat-file to autostart by pressing `[Win]+r` and type `shell:startup`, t
 
 ---
 
-## Settings up the Selenium Grid hub with Docker
+##  3. <a name='SettingsuptheSeleniumGridhubwithDocker'></a>Settings up the Selenium Grid hub with Docker
 
-### Prerequisites
+###  3.1. <a name='Prerequisites-1'></a>Prerequisites
 
 - Have Docker CE installed (no need for Java)
   - Mac: [https://download.docker.com/mac/stable/Docker.dmg](https://download.docker.com/mac/stable/Docker.dmg)
   - Windows: [https://download.docker.com/win/stable/Docker%20Desktop%20Installer.exe](https://download.docker.com/win/stable/Docker%20Desktop%20Installer.exe)
     - Install with Linux subsystem
   - Linux: [https://docs.docker.com/install/linux/docker-ce/centos/](https://docs.docker.com/install/linux/docker-ce/centos/
+
+###  3.2. <a name='Setup'></a>Setup
 
 Create `~/selenium/docker-compose.yaml` for Mac/Linux, or `C:\selenium\docker-compose.yaml` for Windows, with the following content:
 ```yaml
@@ -144,4 +161,3 @@ Enter selenium directory with a terminal window.
 Start grid together with headless Chrome and Firefox: `docker stack deploy -c docker-compose.yaml selenium`
 
 The grid and the browsers are run as Docker services and will start automatically on every reboot.
-
