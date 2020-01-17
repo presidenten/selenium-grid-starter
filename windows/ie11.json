@@ -1,0 +1,23 @@
+{
+  "capabilities":
+  [
+    {
+      "browserName": "internet explorer",
+      "maxInstances": 5,
+      "version": "11.592.18362.0",
+      "platformName": "Windows",
+      "seleniumProtocol": "WebDriver"
+    }
+  ],
+  "port": 5555,
+  "hub": "http://your-grid-url-here.com:4444",
+  "cleanUpCycle": 2000,
+  "timeout": 30000,
+  "proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
+  "maxSession": 5,
+  "register": true,
+  "registerCycle": 5000,
+  "unregisterIfStillDownAfter": 10000,
+  "debug": false,
+  "role": "node"
+}

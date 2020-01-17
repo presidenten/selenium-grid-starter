@@ -1,0 +1,67 @@
+version: '3.7'
+
+services:
+  chrome:
+    image: selenium/node-chrome:3.141.59-gold
+    depends_on:
+      - hub
+    deploy:
+      replicas: 1
+      update_config:
+        order: start-first
+      restart_policy:
+        condition: on-failure
+    environment:
+      HUB_HOST: hub
+      SCREEN_WIDTH: 1600
+      SCREEN_HEIGHT: 1024
+      NODE_MAX_INSTANCES: 5
+      http_proxy: http://proxy-se-uan.ddc.teliasonera.net:8080
+      https_proxy: http://proxy-se-uan.ddc.teliasonera.net:8080
+    entrypoint: bash -c 'SE_OPTS="-host $$HOSTNAME" /opt/bin/entry_point.sh'
+    networks:
+      - selenium
+
+
+  firefox:
+    image: selenium/node-firefox:3.141.59-gold
+    depends_on:
+      - hub
+    deploy:
+      replicas: 1
+      update_config:
+        order: start-first
+      restart_policy:
+        condition: on-failure
+    environment:
+      HUB_HOST: hub
+      SCREEN_WIDTH: 1600
+      SCREEN_HEIGHT: 1024
+      GRID_BROWSER_TIMEOUT: 60
+      NODE_MAX_INSTANCES: 5
+      http_proxy: http://proxy-se-uan.ddc.teliasonera.net:8080
+      https_proxy: http://proxy-se-uan.ddc.teliasonera.net:8080
+    entrypoint: bash -c 'SE_OPTS="-host $$HOSTNAME" /opt/bin/entry_point.sh'
+    networks:
+      - selenium
+
+
+  hub:
+    image: selenium/hub:3.141.59-gold
+    environment:
+      GRID_MAX_SESSION: 16
+      SE_OPTS: '-maxSession 16 -browserTimeout 45'
+    ports:
+      - 4444:4444
+    networks:
+      - selenium
+    deploy:
+      replicas: 1
+      update_config:
+        order: start-first
+      restart_policy:
+        condition: on-failure
+
+
+networks:
+  selenium:

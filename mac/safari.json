@@ -1,0 +1,26 @@
+{
+  "capabilities":
+  [
+    {
+      "browserName": "safari",
+      "platform": "macOS",
+      "maxInstances": 5,
+      "version": "13.0.4",
+      "seleniumProtocol": "WebDriver"
+    }
+  ],
+  "port": 5555,
+  "hub": "http://your-grid-url-here.com:4444",
+  "maxSession": 5,
+  "register": true,
+  "registerCycle": 5000,
+  "nodeStatusCheckTimeout": 5000,
+  "nodePolling": 5000,
+  "role": "node",
+  "unregisterIfStillDownAfter": 10000,
+  "downPollingLimit": 2,
+  "debug": false,
+  "servlets" : [],
+  "withoutServlets": [],
+  "custom": {}
+}
