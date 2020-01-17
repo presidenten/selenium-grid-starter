@@ -9,7 +9,7 @@ The Selenium grid can be run manually or as a docker container.
 <!-- vscode-markdown-toc -->
 * 1. [Prerequisites](#Prerequisites)
 * 2. [Setting up the Selenium Grid hub manually](#SettinguptheSeleniumGridhubmanually)
-	* 2.1. [Mac/Linux**](#MacLinux)
+	* 2.1. [Mac/Linux](#MacLinux)
 	* 2.2. [Windows](#Windows)
 * 3. [Settings up the Selenium Grid hub with Docker](#SettingsuptheSeleniumGridhubwithDocker)
 	* 3.1. [Prerequisites](#Prerequisites-1)
@@ -30,7 +30,7 @@ The Selenium grid can be run manually or as a docker container.
 
 ##  2. <a name='SettinguptheSeleniumGridhubmanually'></a>Setting up the Selenium Grid hub manually
 
-###  2.1. <a name='MacLinux'></a>Mac/Linux**
+###  2.1. <a name='MacLinux'></a>Mac/Linux
 
 - Create `~/selenium`
 - Download the selenium standalone to `~/selenium` from [https://selenium.dev/downloads/](https://selenium.dev/downloads/)
