@@ -2,7 +2,7 @@
 
 Check [./docs](https://github.com/presidenten/selenium-grid-starter/blob/master/docs/) on how to setup your own Selenium Grid.
 
-The files mentioned in the docs can be found in [./docker](https://github.com/presidenten/selenium-grid-starter/blob/master/docker/), [./mac](https://github.com/presidenten/selenium-grid-starter/blob/master/mac/) and [./windows](https://github.com/presidenten/selenium-grid-starter/blob/master/windows/) for convenience.
+The files mentioned in the docs can be found in [./docker](https://github.com/presidenten/selenium-grid-starter/blob/master/grid-in-docker/), [./mac](https://github.com/presidenten/selenium-grid-starter/blob/master/mac/) and [./windows](https://github.com/presidenten/selenium-grid-starter/blob/master/windows/) for convenience.
 
 The only thing missing is the selenium webdrivers, that needs to be downloaded for the correct browser versions present on the selenium grid node.
 - [Chrome](https://chromedriver.storage.googleapis.com/index.html)
