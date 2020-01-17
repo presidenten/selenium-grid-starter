@@ -173,7 +173,7 @@ The Safari selenium webdriver is installed by default and is located at `/usr/bi
 
 ###  3.2. <a name='EnablewebdriversupportinSafari'></a>Enable webdriver support in Safari
 
-####  3.2.1. <a name='HighSierraandlater:'></a>High Sierra and later:
+####  3.2.1. <a name='HighSierraandlater:'></a>High Sierra and later
 Run `sudo safaridriver --enable` in a terminal once
 
 ####  3.2.2. <a name='SierraandEarlier'></a>Sierra and Earlier
